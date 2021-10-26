@@ -20,8 +20,6 @@ researchers.
 
 ## Why use Version Control?
 
---
-
 <p class="stretch">
   <img src="images/phd101212s.png" alt='PhD Comics comic "FINAL".doc depicting
   PhD student and supervisor repeatedly revising a document and generating ever
@@ -96,11 +94,99 @@ academic researchers.
 
 ---
 
-## Git Basics
+<p class="stretch">
+  <img src="https://imgs.xkcd.com/comics/git.png" alt='XKCD Comic depicting someone telling others how to use Git' title="If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything." />
+</p>
+
+[https://xkcd.com/1597/](https://xkcd.com/1597/)
+
+
+---
+
+## A Git Repository
+
+- <ion-icon name="folder-open-outline"></ion-icon> my-project
+  - <ion-icon name="folder-outline"></ion-icon> .git
+  - <ion-icon name="folder-outline"></ion-icon> data
+  - <ion-icon name="folder-outline"></ion-icon> src
+  - <ion-icon name="folder-outline"></ion-icon> test
+  - <ion-icon name="document-outline"></ion-icon> .gitignore
+  - <ion-icon name="document-outline"></ion-icon> LICENSE.txt
+  - <ion-icon name="document-outline"></ion-icon> README.md
+  - <ion-icon name="document-outline"></ion-icon> run.sh
+
+--
+
+<div class='left' style='float:left;width:50%'>
+
+- <ion-icon name="folder-open-outline"></ion-icon> my-project
+  - <ion-icon name="folder-outline"></ion-icon> **.git**
+  - <ion-icon name="folder-outline"></ion-icon> data
+  - <ion-icon name="folder-outline"></ion-icon> src
+  - <ion-icon name="folder-outline"></ion-icon> test
+  - <ion-icon name="document-outline"></ion-icon> .gitignore
+  - <ion-icon name="document-outline"></ion-icon> LICENSE.txt
+  - <ion-icon name="document-outline"></ion-icon> README.md
+  - <ion-icon name="document-outline"></ion-icon> run.sh
+
+</div>
+
+<div class='right' style='float:right;width:50%'>
+
+**.git** is where Git stores the metadata about the project.
+
+We (almost) never edit its contents directly.
+
+Technically, **.git** is the _Git Repository_, but you will often see
+**my-project** described as such.
+
+</div>
+
+--
+
+<div class='left' style='float:left;width:50%'>
+
+- <ion-icon name="folder-open-outline"></ion-icon> my-project
+  - <ion-icon name="folder-outline"></ion-icon> .git
+  - <ion-icon name="folder-outline"></ion-icon> data
+  - <ion-icon name="folder-outline"></ion-icon> src
+  - <ion-icon name="folder-outline"></ion-icon> test
+  - <ion-icon name="document-outline"></ion-icon> **.gitignore**
+  - <ion-icon name="document-outline"></ion-icon> LICENSE.txt
+  - <ion-icon name="document-outline"></ion-icon> README.md
+  - <ion-icon name="document-outline"></ion-icon> run.sh
+
+</div>
+
+<div class='right' style='float:right;width:50%'>
+
+Many Git-managed projects will have a **.gitignore** file, which allows us to
+exclude some files from version control.
+
+</div>
 
 ---
 
 ## Initialising
+
+<div class='left' style='float:left;width:50%'>
+
+```Shell
+cd /Users/paddy/Documents/GitHub
+mkdir my-project
+git init
+```
+
+</div>
+
+<div class='right' style='float:right;width:50%'>
+
+<p class="stretch">
+  <img src="images/github-create-repo-dialog.png" alt='GitHub Desktop repository creation dialog' title='GitHub Desktop repository creation dialog' />
+</p>
+
+</div>
+
 
 ---
 

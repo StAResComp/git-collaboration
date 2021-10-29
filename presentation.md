@@ -79,13 +79,17 @@ hosting Git Repositories - especially public repositories for open-source
 software.
 
 Others platforms include [BitBucket](https://bitbucket.org/) and
-[GitLab.com.](https://gitlab.com/).
+[GitLab.com](https://gitlab.com/).
 
 --
 
 The University has an instance of [GitLab](https://gitlab.st-andrews.ac.uk/)
 (VPN) available to researchers - this is not available to users outside the
 University.
+
+<p class="stretch">
+  <img src="images/gitlab-logo-gray-rgb.svg" alt='GitLab logo' title='GitLab logo' />
+</p>
 
 --
 
@@ -94,12 +98,30 @@ academic researchers.
 
 ---
 
+## Using Git
+
 <p class="stretch">
   <img src="https://imgs.xkcd.com/comics/git.png" alt='XKCD Comic depicting someone telling others how to use Git' title="If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything." />
 </p>
 
-[https://xkcd.com/1597/](https://xkcd.com/1597/)
+https://xkcd.com/1597/
 
+--
+
+There are a number of ways to work with Git on your computer:
+
+- The command-line interface referenced in the XKCD cartoon
+- Terminal based user interfaces like [gitui](https://github.com/extrawurst/gitui) and [lazygit](https://github.com/jesseduffield/lazygit/)
+- Graphical user interfaces like [GitHub Desktop](https://desktop.github.com/) and [SourceTree](https://www.sourcetreeapp.com/)
+- As a feature (or plugin) of development tools and editors like RStudio.
+
+--
+
+Other user interfaces can be considered as wrappers around the command-line
+interface. They tend to hide some of the details of how Git works.
+
+This presentation includes screenshots from GitHub Desktop alongside the
+equivalent commands.
 
 ---
 
@@ -169,28 +191,88 @@ exclude some files from version control.
 
 ## Initialising
 
-<div class='left' style='float:left;width:50%'>
-
-```Shell
-cd /Users/paddy/Documents/GitHub
-mkdir my-project
-git init
+```shell
+$ cd /Users/paddy/Documents/GitHub
+$ mkdir my-project
+$ cd my-project
+$ git init
 ```
-
-</div>
-
-<div class='right' style='float:right;width:50%'>
 
 <p class="stretch">
   <img src="images/github-create-repo-dialog.png" alt='GitHub Desktop repository creation dialog' title='GitHub Desktop repository creation dialog' />
 </p>
 
-</div>
+--
 
+```shell
+$ ls -a
+.       ..      .git
+$ git status
+On branch main
+nothing to commit, working tree clean
+```
+
+<p class="stretch">
+  <img src="images/github-empty-repo.png" alt='GitHub Desktop empty repository' title='GitHub Desktop empty repository' />
+</p>
 
 ---
 
-## Adding and Commiting
+## Adding and Committing
+
+We can add a file to our project folder using any text editor or, indeed, any
+piece of software which allows us to save files.
+
+Here, we use a text editor to create a README file using markdown syntax and
+save it as `README.md`.
+
+--
+
+```shell
+$ ls -a
+.       ..      .git    README.md
+$ cat README.md
+# My Project
+
+This is an example project to illustrate the use of Git for
+collaboration in a research context.
+
+```
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-staged-file.png" alt='GitHub Desktop showing README ready for commit' title='GitHub Desktop showing README ready for commit' />
+</p>
+
+--
+
+```shell
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add README.md
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+```
+
+--
+
+```shell
+$ git commit -m 'Adds basic README describing project'
+```
+
+<p class="stretch">
+  <img src="images/github-desktop-commit.png" alt='Committing README.md in GitHub Desktop' title='Committing README.md in GitHub Desktop' />
+</p>
 
 ---
 

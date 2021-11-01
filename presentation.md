@@ -278,13 +278,143 @@ $ git commit -m 'Adds basic README describing project'
 
 ## Viewing the Log
 
+<p class="stretch">
+  <img src="images/github-history.png" alt='Viewing history in GitHub Desktop' title='Viewing history in GitHub Desktop' />
+</p>
+
+--
+
+```shell
+$ git log
+commit c8bacfbdfd15e5f0924dde8461662ba8fdb676da
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Mon Nov 1 15:36:13 2021 +0000
+
+    Adds bash script to run analysis
+
+commit 3fa305a9d4e76e9a4bb58f724a15c2f5ae032edc
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Mon Nov 1 15:35:39 2021 +0000
+
+    Adds test script
+
+commit 382abfc258f398954ad897e52ff224a75188a7ca
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Mon Nov 1 15:32:32 2021 +0000
+
+    Adds analysis script
+
+commit d9342395f59895e818244e9ffbfcd3e52ee3f848
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Mon Nov 1 15:32:06 2021 +0000
+
+    Adds input data
+
+commit 36e0ef19bb5a33d9dffab84e807530acc360a2b5
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Mon Nov 1 15:31:26 2021 +0000
+
+    Adds MIT license
+
+commit 7145797baccfb6f07e3639745422ce97d383ee82
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Fri Oct 29 15:33:38 2021 +0100
+
+    Adds basic README describing project
+
+commit 3e2a35919aa25a688d25528c5014251cf8c5ed67
+Author: Patrick McCann <pgm5@st-andrews.ac.uk>
+Date:   Tue Oct 26 16:44:19 2021 +0100
+
+    Initial commit
+```
+
+--
+
+```shell
+$ git diff HEAD~1 HEAD
+diff --git a/run.sh b/run.sh
+new file mode 100755
+index 0000000..a84485c
+ --- /dev/null
+ +++ b/run.sh
+@@ -0,0 +1,4 @@
++#!/bin/bash
++
++cp data/input.csv data/output.csv
++python src/analysis.py
+```
+
 ---
 
 ## Ignoring Things
 
+There are situations where we have a file or files in our repository which we
+don't want to place under version control e.g.
+
+- The results of analysis.
+- Anything containing a password or other sensitive data.
+- Files created by your tools which aren't really part of the project.
+
+--
+
+<p class="stretch">
+  <img src="images/github-ignore.png" alt='Ignoring a file in GitHub Desktop' title='Ignoring a file in GitHub Desktop' />
+</p>
+
+```shell
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        data/output.csv
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git ignore data/output.csv
+Adding pattern(s) to: .gitignore
+... adding 'data/output.csv'
+```
+
+--
+
+<p class="stretch">
+  <img src="images/github-gitignore.png" alt='Change to .gitignore in GitHub Desktop' title='Change to .gitignore in GitHub Desktop' />
+</p>
+
+```shell
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
 ---
 
 ## Remotes - Pushing and Pulling
+
+So far, everything has been on our own computer. This is useful, but Git really
+comes into its own when collaborating with others.
+
+To do that, we need to keep our projects in sync between multiple computers
+(also useful if you work from multiple computers yourself).
+
+--
+
+You can, in principle, have your Git on your computer communicate directly with
+your colleagues' to keep things in sync, but it's generally easier to sync with
+another location to which you all have access.
+
+That other location could be a desktop computer in your office or GitHub (or
+GitLab) - as far as Git is concerned there isn't really a difference. GitHub
+etc. just happen to offer some extra features on top of Git - most notably a
+web interface.
+
+--
+
+
 
 ---
 

@@ -683,6 +683,12 @@ performed manually.
 
 ## Git in RStudio
 
+<p class="stretch">
+  <img src="images/git-in-rstudio.png" alt='The Git menu in RStudio' title='The Git menu in RStudio' />
+</p>
+
+https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html
+
 ---
 
 ## Branching

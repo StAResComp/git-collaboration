@@ -595,16 +595,93 @@ Fast-forward
 --
 
 <p class="stretch">
-  <img src="images/github-desktop-history-showing-remote-change.png " alt='GitHub Desktop history showing change pulled from GitHub.com' title='GitHub Desktop history showing change pulled from GitHub.com' />
+  <img src="images/github-desktop-history-showing-remote-change.png" alt='GitHub Desktop history showing change pulled from GitHub.com' title='GitHub Desktop history showing change pulled from GitHub.com' />
+</p>
+
+---
+
+## Merging
+
+Knowing how to push to and pull from an remote is enough to enable
+collaboration - we'll come on to some techniques which can make things easier.
+
+We can run into complications if collaborators are working on a project at the
+same time, requiring commits to be merged.
+
+--
+
+Git does as much as possible to make this painless.
+
+It will handle merges automatically if the commits to be merged involve changes
+to different files, and even if the changes are in different parts of the same
+file.
+
+If the changes are to the same part of a file, the merge will need to be
+performed manually.
+
+--
+
+<p class="stretch">
+  <img src="images/conflicting-change-on-github-web.png" alt='A change to the license statement in the README made on GitHub.com' title='A change to the license statement in the README made on GitHub.com' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/conflicting-change-in-github-desktop.png" alt='A different change to the license statement in the README made locally' title='A different change to the license statement in the README made locally' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-newer-commits-on-remote.png" alt='Unable to push from GitHub Desktop due to changes on remote' title='Unable to push from GitHub Desktop due to changes on remote' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-after-fetch-merge.png" alt='GitHub Desktop after fetching changes from remote' title='GitHub Desktop after fetching changes from remote' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-after-pull-with-conflict.png" alt='GitHub Desktop advising of conflict after pulling' title='GitHub Desktop advising of conflict after pulling' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-showing-conflict-details.png" alt='Conflict details displayed in GitHub Desktop' title='Conflict details displayed in GitHub Desktop' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-with-resolved-conflict-ready-to-commit-merge.png" alt='Resolved conflict in GitHub Desktop ready to merge' title='Resolved conflict in GitHub Desktop ready to merge' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-after-commit-merge.png" alt='GitHub Desktop after making merge commit' title='GitHub Desktop after making merge commit' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-after-push-merge.png" alt='GitHub Desktop after pushing merge commit' title='GitHub Desktop after pushing merge commit' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-showing-result-of-merge.png" alt='README on GitHub showing result of merge commit' title='README on GitHub showing result of merge commit' />
 </p>
 
 ---
 
 ## Git in RStudio
-
----
-
-## Collaboration
 
 ---
 

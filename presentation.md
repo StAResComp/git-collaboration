@@ -213,7 +213,7 @@ nothing to commit, working tree clean
 ```
 
 <p class="stretch">
-  <img src="images/github-empty-repo.png" alt='GitHub Desktop empty repository' title='GitHub Desktop empty repository' />
+  <img src="images/github-desktop-empty-repo.png" alt='GitHub Desktop empty repository' title='GitHub Desktop empty repository' />
 </p>
 
 ---
@@ -345,6 +345,14 @@ index 0000000..a84485c
 +python src/analysis.py
 ```
 
+--
+
+<p class="stretch">
+  <img src="https://imgs.xkcd.com/comics/git_commit.png" alt='XKCD Comic showing commit messages degrading over time' title="XKCD Comic showing commit messages degrading over time" />
+</p>
+
+https://xkcd.com/1296/
+
 ---
 
 ## Ignoring Things
@@ -393,7 +401,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ---
 
-## Remotes - Pushing and Pulling
+## Remotes
 
 So far, everything has been on our own computer. This is useful, but Git really
 comes into its own when collaborating with others.
@@ -407,14 +415,188 @@ You can, in principle, have your Git on your computer communicate directly with
 your colleagues' to keep things in sync, but it's generally easier to sync with
 another location to which you all have access.
 
-That other location could be a desktop computer in your office or GitHub (or
-GitLab) - as far as Git is concerned there isn't really a difference. GitHub
-etc. just happen to offer some extra features on top of Git - most notably a
-web interface.
+That other location could be a desktop computer in your office or it could be
+GitHub (or GitLab) - as far as Git is concerned there isn't really a
+difference.
 
 --
 
+### Creating a repo on GitHub.com
 
+<div class='left' style='float:left;width:50%'>
+
+<p class="stretch">
+  <img src="images/github-create-new-menu.png" alt='GitHub.com create repo menu item' title='GitHub.com create repo menu item' />
+</p>
+
+</div>
+
+<div class='right' style='float:right;width:50%'>
+
+<p class="stretch">
+<img src="images/github-create-new-form.png" alt='GitHub.com create repo form' title='GitHub.com create repo form' />
+</p>
+
+</div>
+
+--
+
+<p class="stretch">
+  <img src="images/github-empty-repo.png" alt='GitHub.com empty repository' title='GitHub.com empty repository' />
+</p>
+
+--
+
+### Publishing a repo from GitHub Desktop
+
+<p class="stretch">
+  <img src="images/github-desktop-publish.png" alt='Publishing a repo from GitHub Desktop' title='Publishing a repo from GitHub Desktop' />
+</p>
+
+--
+
+### The repo on GitHub
+
+<p class="stretch">
+  <img src="images/repo-on-github.png" alt='My Project on GitHub.com' title='My Project on GitHub.com' />
+</p>
+
+---
+
+### Pushing
+
+<p class="stretch">
+  <img src="images/github-desktop-readme-change.png" alt='README change in GitHub Desktop' title='README change in GitHub Desktop' />
+</p>
+
+--
+
+```shell
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git diff
+diff --git a/README.md b/README.md
+index e0a3173..b9fd878 100644
+ --- a/README.md
+ +++ b/README.md
+@@ -2,3 +2,6 @@
+
+ This is an example project to illustrate the use of Git for
+ collaboration in a research context.
++
++Copyright 2021 University of St Andrews. Licensed under the terms of the MIT
++License.
+```
+
+--
+
+After committing...
+
+```shell
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 429 bytes | 429.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pgmccann/my-project.git
+   2bf80ab..3ec775a  main -> main
+```
+
+<p class="stretch">
+  <img src="images/github-desktop-commits-to-push.png" alt='Local commits ready to push in GitHub Desktop' title='Local commits ready to push in GitHub Desktop' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/local-change-on-github.png" alt='Local change reflected in GitHub after push' title='Local change reflected in GitHub after push' />
+</p>
+
+---
+
+## Pulling
+
+Let's add a License
+[badge](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba) using GitHub's
+editing interface.
+
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+--
+
+<p class="stretch">
+  <img src="images/editing-in-github-start.png" alt='Starting to edit README on GitHub.com' title='Starting to edit README on GitHub.com' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/editing-in-github-done.png" alt='Finished editing README on GitHub.com' title='Finished editing README on GitHub.com' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/editing-in-github-commit.png" alt='Committing change to README on GitHub.com' title='Committing change to README on GitHub.com' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/readme-with-badge.png" alt='README displaying MIT badge on GitHub.com' title='README displaying MIT badge on GitHub.com' />
+</p>
+
+--
+
+```shell
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+<p class="stretch">
+  <img src="images/github-desktop-no-changes.png" alt='GitHub Desktop showing no changes' title='GitHub Desktop showing no changes' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-changes-to-pull.png" alt='GitHub Desktop showing changes to pull' title='GitHub Desktop showing changes to pull' />
+</p>
+
+```shell
+$ git pull
+Updating 3ec775a..658258a
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+```
+
+--
+
+<p class="stretch">
+  <img src="images/github-desktop-history-showing-remote-change.png " alt='GitHub Desktop history showing change pulled from GitHub.com' title='GitHub Desktop history showing change pulled from GitHub.com' />
+</p>
 
 ---
 

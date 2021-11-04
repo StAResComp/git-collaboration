@@ -111,8 +111,11 @@ https://xkcd.com/1597/
 There are a number of ways to work with Git on your computer:
 
 - The command-line interface referenced in the XKCD cartoon
-- Terminal based user interfaces like [gitui](https://github.com/extrawurst/gitui) and [lazygit](https://github.com/jesseduffield/lazygit/)
-- Graphical user interfaces like [GitHub Desktop](https://desktop.github.com/) and [SourceTree](https://www.sourcetreeapp.com/)
+- Terminal based user interfaces like
+  [gitui](https://github.com/extrawurst/gitui) and
+  [lazygit](https://github.com/jesseduffield/lazygit/)
+- Graphical user interfaces like [GitHub Desktop](https://desktop.github.com/)
+  and [SourceTree](https://www.sourcetreeapp.com/)
 - As a feature (or plugin) of development tools and editors like RStudio.
 
 --
@@ -409,6 +412,8 @@ comes into its own when collaborating with others.
 To do that, we need to keep our projects in sync between multiple computers
 (also useful if you work from multiple computers yourself).
 
+Your computer is _local_, one which which you are syncing is a _remote_.
+
 --
 
 You can, in principle, have your Git on your computer communicate directly with
@@ -463,7 +468,7 @@ difference.
 
 ---
 
-### Pushing
+## Pushing
 
 <p class="stretch">
   <img src="images/github-desktop-readme-change.png" alt='README change in GitHub Desktop' title='README change in GitHub Desktop' />
@@ -606,7 +611,7 @@ Knowing how to push to and pull from an remote is enough to enable
 collaboration - we'll come on to some techniques which can make things easier.
 
 We can run into complications if collaborators are working on a project at the
-same time, requiring commits to be merged.
+same time, requiring commits to be _merged_.
 
 --
 
@@ -693,9 +698,171 @@ https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html
 
 ## Branching
 
+_Branches_ in Git allow different versions of a project to exist in parallel,
+with the repository keeping track of all of them.
+
+Commits can be made to a branch irrespective of what's happening on any others.
+
+Branches can be merged, with any conflicts resolved in the same way we've
+already seen.
+
+--
+
+There are a number of reasons you might use branches, including:
+
+- To try something out without changing the content of the main branch
+- To work on different things - whether it's one person switching between them
+  or collaborators working in parallel.
+
+--
+
+Imagine two researchers are collaborating on a piece of data analysis software.
+One is working on new visualisations, and the other is working on optimising
+the analysis.
+
+<p class="stretch">
+  <img src="images/git-branches.png" alt='Git branching example diagram' title='Git branching example diagram' />
+</p>
+
+Some say you should never work directly on the main branch.
+
+--
+
+<p class="stretch">
+  <img src="images/branches-01-github-desktop-showing-branches.png" alt='GitHub Desktop showing branches' title='GitHub Desktop showing branches' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-02-github-desktop-creating-branch.png" alt='GitHub Desktop creating branch' title='GitHub Desktop creating branch' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-03-github-desktop-showing-branches-including-new.png" alt='GitHub Desktop showing new branch' title='GitHub Desktop showing new branch' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-04-github-desktop-working-on-new-branch.png" alt='GitHub Desktop working on new branch' title='GitHub Desktop working on new branch' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-05-github-desktop-changes-on-new-branch.png" alt='GitHub Desktop showing changes on new branch' title='GitHub Desktop showing changes on new branch' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-06-github-desktop-branch-ready-to-publish.png" alt='GitHub Desktop branch ready to publish' title='GitHub Desktop branch ready to publish' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-07-github-desktop-branch-published.png" alt='Github Desktop branch published' title='GitHub Desktop branch published' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-08-github-branch-ready-to-merge.png" alt='Branch ready to merge on GitHub' title='Branch ready to merge on GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-09-github-viewing-branch.png" alt='Viewing new branch on GitHub' title='Viewing new branch on GitHub' />
+</p>
+
+--
+
+To incorporate the changes made in the new branch into the main branch, we make
+a _pull request_.
+
+This point of the process can provide a good opportunity for collaborators to
+review changes.
+
+It's not uncommon for projects to discourage contributors from accepting their
+own pull requests.
+
+--
+
+<p class="stretch">
+  <img src="images/branches-10-github-open-pull-request.png" alt='Opening a pull request in GitHub' title='Opening a pull request in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-11-github-create-pull-request.png" alt='Creating a pull request in GitHub' title='Creating a pull request in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-12-github-pull-request-created.png" alt='Pending pull request in GitHub' title='Pending pull request in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-13-github-merging-pull-request.png" alt='Merging a pull request in GitHub' title='Merging a pull request in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-14-github-pull-request-merged.png" alt='Merged pull request in GitHub' title='Merged pull request in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/branches-15-github-showing-merged-changes.png" alt='Viewing merged changes in main on GitHub' title='Viewing merged changes in main on GitHub' />
+</p>
+
 ---
 
 ## Forking
+
+_Forking_ looks a bit like branching - we create a fork, can make changes there
+without changing things elsewhere, and we can use pull requests to merge those
+changes.
+
+However, whereas branching occurs within a repository, forking takes place
+across repositories.
+
+It's really a function of platforms like GitHub and GitLab rather than a part
+of Git itself.
+
+--
+
+Imagine coming across an open-source R package on GitHub which does exactly the
+analysis you need, but the you need the output in a different format.
+
+You can fork the repository, creating a clone of it in your GitHub account,
+including all branches and commit details.
+
+You can then make changes in your fork of the application, so that is works as
+you need it to.
+
+--
+
+Alternatively, maybe you spot something in a repository that needs to be fixed
+- could be a bug, or just a typo in the documentation.
+
+You can fork the repository, fix the issue, and submit a pull request to the
+original repository to get your changes included there.
+
+--
+
+You can fork any public repository.
 
 ---
 

@@ -605,6 +605,46 @@ Fast-forward
 
 ---
 
+## Managing access on GitHub
+
+My project is in a public GitHub repository, so anyone can see it - but only I
+can make commits, either by editing on the GitHub website, or pushing from my
+computer.
+
+But I can add collaborators.
+
+--
+
+<p class="stretch">
+  <img src="images/github-manage-access-01-access-settings.png" alt='GitHub repository access settings' title='GitHub repository access settings' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-manage-access-02-add-collaborator.png" alt='Adding a collaborator in GitHub' title='Adding a collaborator in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-manage-access-03-add-collaborator.png" alt='Adding a collaborator in GitHub' title='Adding a collaborator in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-manage-access-04-awaiting-invitation-acceptance.png" alt='Waiting for collaborator to accept GitHub invitation' title='Waiting for collaborator to accept GitHub invitation' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/github-manage-access-05-invitation-accepted.png" alt='Collaborator has accepted invitation' title='Collaborator has accepted invitation' />
+</p>
+
+---
+
 ## Merging
 
 Knowing how to push to and pull from an remote is enough to enable

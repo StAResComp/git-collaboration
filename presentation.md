@@ -1324,8 +1324,6 @@ You can generally fork any public repository.
   <img src="images/forking-01-fork-button.png" alt='The "fork" button in GitHub' title='The "fork" button in GitHub' />
 </p>
 
---
-
 notes:
 
 You'll see a 'Fork' button on every repository in GitHub
@@ -1436,9 +1434,32 @@ Open Data
 
 Open Software
 
+notes:
+
+Over the past few decades there has been an increasing drive to make research
+publications open to all; over the past decade there has been a movement to
+make the research data underpinning papers available, with many funders now
+requiring it - and we're beginning to see the same principles being applied to
+the software that's used to process that data.
+
+GitHub provides a useful platform to facilitate this, and Git lends itself
+towards openness.
+
 --
 
 Papers are not the only way to contribute to research
+
+notes:
+
+Alongside this is a growing recognition of the flaws in a system which
+encourages the publication of as many papers as possible showing exciting,
+novel results in a handful of high-profile journals.
+
+As well as attempts to encourage things like the publication of null and
+negative results, there is a recognition that research outputs other than
+papers are worthy of note and reward - including software.
+
+GitHub provides a useful service here too.
 
 --
 
@@ -1448,6 +1469,10 @@ Make it citable (and cite software you use)
 
 Archive your code, get a DOI and add it to Pure
 
+notes:
+
+We'll look at each of these in turn.
+
 ---
 
 ## Licensing
@@ -1455,6 +1480,10 @@ Archive your code, get a DOI and add it to Pure
 Making something public doesn't make it open-source!
 
 You need to attach a [suitable license](https://choosealicense.com/).
+
+notes:
+
+By default, all rights are reserved.
 
 ---
 
@@ -1490,21 +1519,43 @@ You can also add your software to
 [Pure](https://risweb.st-andrews.ac.uk/portal/). The steps involved are
 described at [Code4REF](https://code4ref.github.io/).
 
+notes:
+
+This process will be changing soon.
+
 ---
 
 ## Other GitHub features
 
 - Issues
 - Project Management
-- Automation
-  - GitHub Actions
-  - Travis CI
+- Automation with GitHub Actions
+
+(All of these have equivalents in GitLab).
+
+notes:
+
+These are less particular to research, but GitHub's issues feature is widely
+used to report problems, request features or ask for help. It now also provides
+project management facilities to put those issues on Kanban boards and track
+their progress.
+
+Automation is a big topic, but there are tools available to test your software
+in a number of configurations - you could automate testing of an R package with
+different versions of R and other dependency packages. You could automatically
+deploy a website when a change is made to the main branch. You could
+automatically generate documentation - and more besides.
 
 ---
 
 ## Resources
 
 https://software.ac.uk/resources
+
+notes:
+
+I was going to look for others, but looking at the wealth of stuff on the SSI
+site, it didn't seem necessary.
 
 ---
 

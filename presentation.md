@@ -4,6 +4,8 @@ Patrick McCann
 
 Research Computing, University of St Andrews
 
+research-computing@st-andrews.ac.uk
+
 ---
 
 ## Software Carpentry
@@ -21,7 +23,7 @@ researchers.
 ## Why use Version Control?
 
 <p class="stretch">
-  <img src="images/phd101212s.png" alt='PhD Comics comic "FINAL".doc depicting
+  <img src="images/phd101212s.png" alt=' PhD Comics comic "FINAL".doc depicting
   PhD student and supervisor repeatedly revising a document and generating ever
   more complicated file names for the different versions.  Copyright Jorge Cham
   2012' title='PhD Comics "FINAL".doc' />
@@ -894,32 +896,160 @@ you need it to.
 
 --
 
-Alternatively, maybe you spot something in a repository that needs to be fixed
-- could be a bug, or just a typo in the documentation.
+The new repo is linked to the old one. So, maybe you spot something in a
+repository that needs to be fixed - could be a bug, or just a typo in the
+documentation.
 
 You can fork the repository, fix the issue, and submit a pull request to the
 original repository to get your changes included there.
 
+You can generally fork any public repository.
+
 --
 
-You can fork any public repository.
+<p class="stretch">
+  <img src="images/forking-01-fork-button.png" alt='The "fork" button in GitHub' title='The "fork" button in GitHub' />
+</p>
 
----
+--
 
-## Automation
+<p class="stretch">
+  <img src="images/forking-02-where.png" alt='GitHub "where to fork" dialog' title='GitHub "where to fork" dialog' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-03-forked-project.png" alt='A forked project in GitHub' title='A forked project in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-04-not-behind.png" alt='GitHub dialog informing forked project is not behind upstream' title='GitHub dialog informing forked project is not behind upstream' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-05-not-ahead.png" alt='GitHub dialog informing forked project is not ahead of upstream' title='GitHub dialog informing forked project is not ahead of upstream' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-06-editing-readme.png" alt='Editing README in forked repo on GitHub' title='Editing README in forked repo on GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-07-editing-readme.png" alt='Editing README in forked repo on GitHub' title='Editing README in forked repo on GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-08-create-pull-request.png" alt='Creating a pull request from a fork in GitHub' title='Creating a pull request from a fork in GitHub' />
+</p>
+
+--
+
+<p class="stretch">
+  <img src="images/forking-09-merge-pull-request.png" alt='Merging a pull request from a fork in GitHub' title='Merging a pull request from a fork in GitHub' />
+</p>
 
 ---
 
 ## Open Science
 
+Open Access Papers
+
+&darr;
+
+Open Data
+
+&darr;
+
+Open Software
+
+--
+
+Papers are not the only way to contribute to research
+
+--
+
+Make code available online under a suitable license
+
+Make it citable (and cite software you use)
+
+Archive your code, get a DOI and add it to Pure
+
 ---
 
 ## Licensing
+
+Making something public doesn't make it open-source!
+
+You need to attach a [suitable license](https://choosealicense.com/).
 
 ---
 
 ## Citation
 
+There are several ways to include information about how your code should be
+cited.
+
+The [Citation File Format](https://citation-file-format.github.io/) describes a
+fairly simple text format, normally used in a `CITATION.cff`file.
+
+[CodeMeta](https://codemeta.github.io) is more complex, and can capture more
+metadata about the project than is relevant to citation - but the website
+includes a `codemeta.json` file generator.
+
 ---
 
-## Zenodo and Pure
+## Zenodo
+
+GitHub's own documentation on '[Making your code
+citable](https://guides.github.com/activities/citable-code/)' describes how to
+archive your code and get a DOI from [Zenodo](https://zenodo.org).
+
+You can link your GitHub account to your Zenodo account to easily archive
+repositories - and every time you tag a release in GitHub, it is automatically
+archived.
+
+---
+
+## Pure
+
+You can also add your software to
+[Pure](https://risweb.st-andrews.ac.uk/portal/). The steps involved are
+described at [Code4REF](https://code4ref.github.io/).
+
+---
+
+## Other GitHub features
+
+- Issues
+- Project Management
+- Automation
+  - GitHub Actions
+  - Travis CI
+
+---
+
+## Resources
+
+https://software.ac.uk/resources
+
+---
+
+## Thank-you
+
+research-computing@st-andrews.ac.uk
+
+https://researchcomputing.wp.st-andrews.ac.uk/team/
+
+[Research Software in
+Teams](https://teams.microsoft.com/l/team/19%3a693986665e6a401b864ca3634622ce9d%40thread.skype/conversations?groupId=fc5b43d7-ab24-4e7e-b539-f715716b3cd1&tenantId=f85626cb-0da8-49d3-aa58-64ef678ef01a)

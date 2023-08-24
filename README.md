@@ -3,6 +3,8 @@
 This presentation has been created using [reveal.js
 4.1.2](https://github.com/hakimel/reveal.js/tree/a453ac08a82069cd0a32109982b979232f7631f6).
 
+There are instructions below for how to serve the application using `reveal.js`, but **you may prefer to simply view the included PDF**.
+
 ## Running
 
 - Clone this repository and `cd` into it.
